@@ -1,25 +1,23 @@
 #include <iostream>
 using namespace std;
-double TravelExpense(double, double, double);
+void TravelExpense(double, double, double);
 
 int main()
 {
-    double mtod, gp, mpg;
+    double m, g, mpg;
     cout << "Travel Expense App\n";
     cout << "==================\n\n";
-    cout << "Enter miles you intend to drive ==>";
-    cin >> mtod;
-    cout << "Enter current gas prices ==>";
-    cin >> gp;
-    cout << "Enter your car's miles per gallon ==>";
+    cout << "Enter miles you intend to drive ==> ";
+    cin >> m;
+    cout << "Enter current gas prices ==> ";
+    cin >> g;
+    cout << "Enter your car's miles per gallon ==> ";
     cin >> mpg;
-    double exp = (mtod, gp, mpg);
-    cout << "The sum is ==>" << TravelExpense(mtod, gp, mpg) << endl;
+    TravelExpense(m, g, mpg);
 }
 
 
-double TravelExpense(double mtod, double gp, double mpg)
+void TravelExpense(double mtod, double gp, double mpg)
 {
-    double e = (mtod / mpg) * gp;
-    return e;
+    cout << "The cost is ==> $" << ((mtod/mpg)*gp) << endl;
 }
